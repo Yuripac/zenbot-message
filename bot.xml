@@ -1,7 +1,7 @@
 <context>
-  <input id="purchase" pattern="* blablableble *">
+  <input id="purchase" pattern="* (rastreio|rastreamento|código|correios|rastrear) *">
     <get url="http://factory.gocase.com.br/api/v1/zenbot/order_details" var="Data">
-      <param name="email" value="luizyana@yahoo.com.br"/>
+      <param name="email" value="$req_user_email"/>
     </get>
 
     <var name="OrderNumber" value="javascript: $Data.order.number"/>
