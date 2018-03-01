@@ -1,5 +1,5 @@
 <context>
   <input id="purchase" pattern="* blablableble *">
-    <output value="Mensagem do bot">
+    <output value="Mensagem do bot"/>
   </input>
 </context>
