@@ -1,6 +1,6 @@
 <context>
   <input id="purchase" pattern="* (rastreio|rastreamento|código|correios|rastrear) *">
-    <var name="RequestedOrder" value="javascript: $req_text.match(/\d{13}/) ? $req_text.match(/\d{13}/)[0] : null"/>
+    <var name="RequestedOrder" value="javascript: $req_text.match(/\d{13}/) ? $req_text.match(/\d{13}/)[0] : ''"/>
     <get url="http://factory.gocase.com.br/api/v1/zenbot/order_details" var="Data">
       <param name="email" value="$req_user_email"/>
       <param name="reference" value="$RequestedOrder">
