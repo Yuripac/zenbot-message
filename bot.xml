@@ -1,24 +1,8 @@
 <context>
-  <input id="purchase" pattern="* (rastreio|rastreamento|código|correios|rastrear) *">
-    <get url="http://factory.gocase.com.br/api/v1/zenbot/order_details" var="Data">
-      <param name="email" value="$req_user_email"/>
-    </get>
+  <input id="purchase" pattern="* blablableble *">
+    
 
-    <var name="OrderNumber" value="javascript: $Data.order.number"/>
-    <var name="OrderInProduction" value="javascript: $Data.order.in_production"/>
-    <var name="OrderPostingIsLate" value="javascript: $Data.order.posting_is_late"/>
-
-    <context if='$OrderInProduction and !$OrderPostingIsLate'>
-      <output>
-        <![CDATA[
-        <p>Oi $req_user_name, tudo bem? 😃</p>
-        <p>Como informamos no nosso site, após a confirmação de pagamento temos um prazo para produção e postagem de seu pedido $OrderNumber.</p>
-        <p>Esse prazo é necessário porque nossos produtos são produzidos especialmente para você, quando você faz sua compra. Após a postagem, aí sim se inicia a contagem do prazo determinado pelo serviço de entrega para a sua localidade!</p>
-        <p>Não se preocupa que o seu pedido está dentro do prazo de produção e postagem. Em breve, você deve receber novas atualizações com o código de rastreio no seu e-mail de cadastro.</p>
-        <p>Agradecemos o seu contato e se tiver qualquer outra dúvida basta responder esse e-mail que nossa equipe vai te ajudar! 💓</p>
-        ]]>
-      </output>
-    </context>
+    <output value="$Number"/>
 
   </input>
 </context>
