@@ -1,8 +1,6 @@
 <context>
-  <input id="purchase" pattern="* blablableble *">
-    <context pattern="* $Number *">
-      <output value="$Number"/>
-    </context>
+  <input id="purchase" pattern="{blablableble [$Number]}">    
+    <output value="$Number"/>
 
   </input>
 </context>
