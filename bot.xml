@@ -1,8 +1,8 @@
 <context>
-  <input id="purchase" pattern="* blablableble * {$Text $Number}">
+  <input id="purchase" pattern="* blablableble *">
     
 
-    <output value="$Number $Text"/>
+    <output value="$Number"/>
 
   </input>
 </context>
